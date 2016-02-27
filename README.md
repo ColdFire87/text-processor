@@ -33,6 +33,8 @@ node app.js
 
 Go to [http://localhost:3000](http://localhost:3000) to see the app running.
 
+You can use the sample input in `text.txt` to test the app.
+
 ## Contributions ##
 
 This project is not being actively maintained. If you wish to contribute fork the repository and add the changes to your own forked repo.
