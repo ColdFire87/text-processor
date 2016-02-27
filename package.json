@@ -1,0 +1,17 @@
+{
+  "name": "test_harry",
+  "version": "1.0.0",
+  "description": "Text processor",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Stefan Tertan",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "errorhandler": "^1.4.3",
+    "express": "^4.13.4"
+  }
+}

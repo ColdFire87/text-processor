@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Word count test</title>
+
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" media="screen">
+    <link rel="stylesheet" href="css/vendor/sweetalert.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header class="container-fluid text-center">
+        <div class="row-fluid">
+            <div class="col-sm-12">
+                <h1>Text processor</h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <form>
+                    <div class="form-group">
+                        <!--label for="wordsArea">Text to process</label-->
+                        <textarea class="form-control" name="wordsArea" id="wordsArea"
+                                  cols="30" rows="5" placeholder="Start typing or paste your text here"></textarea>
+                    </div>
+                </form>
+            </div>
+
+            <div class="col-lg-6">
+                <section>
+                    <h2>Extracted details</h2>
+                    <br/>
+                    <table class="table table-striped">
+                        <tbody>
+                        <tr>
+                            <th>Processed text</th>
+                            <td><span id="output"></span></td>
+                        </tr>
+
+                        <tr>
+                            <th>Total words count</th>
+                            <td><span id="wordCount" class="badge"></span></td>
+                        </tr>
+                        <tr>
+                            <th>Unique words count</th>
+                            <td><span id="uniqueWordCount" class="badge"></span></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <br/>
+
+                    <hr/>
+                    <h2>Unique words and individual count</h2>
+                    <br/>
+                    <div class="container-fluid">
+                        <div class="row" id="wordsBreakdown"></div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="col-lg-6 text-center">
+                <section>
+                    <h2>Unique occurences distribution</h2>
+                    <br/>
+                    <div id="graphDiv"></div>
+                    <p id="graphAlert" class="alert alert-info">Graph will be displayed here</p>
+                    <p><span id="hiddenValues"></span> words not shown <i>(arc less than <span id="minAngle"></span> degrees)</i></p>
+                </section>
+            </div>
+        </div>
+
+        <section>
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>Text analysis</h2>
+                    <hr/>
+                    <div id="textAnalysisAlertDiv" class="alert alert-info">
+                        Text changed - data displayed is not accurate - request data again to get accurate results
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <button id="getKeywordsBtn" class="btn btn-large btn-success">Get Keywords</button>
+                    <div id="keywords"></div>
+                </div>
+
+                <div class="col-lg-6">
+                    <button id="getEntitiesBtn" class="btn btn-large btn-success">Get Entities</button>
+                    <div id="entities"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="container-fluid">
+        <div class="row-fluid text-center">
+            <div class="col-lg-12">
+                <p>Created by Stefan Tertan <em>(27/02/2016)</em></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="js/vendor/sweetalert.min.js"></script>
+    <script src="js/globals.js"></script>
+    <script src="js/donut.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
